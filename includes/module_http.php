@@ -15,13 +15,13 @@ class knHttp{
 	var $ranges = false;
 	var $request_headers = Array();
 	protected $referer = '';
-	protected $streaming = false;
+	protected $streaming = true;
 	protected $mode = 'curl';
 	/* Return Values */
 	var $content;
 	var $headers;
 	var $doctype;
-	function __construct($url,$streaming = false){
+	function __construct($url,$streaming){
 		$this->url = $url;
 		$this->streaming = $streaming;
 		$this->user_agent = $_SERVER['HTTP_USER_AGENT'];
