@@ -255,7 +255,7 @@ $knParser = new knParser($knURL,$knHTTP->content,$_SCRIPT . '?url=');
 $knParser->setMimeType($knHTTP->doctype);
 $knParser->setCharset($knHTTP->doctype,$knHTTP->content);
 $knParser->setEncoder($knEncoder);
-if(defined('KNPROXY_ENCRYPT_PAGE') && KNPROXY_ENCRYPT_PAGE=='true'){
+/*if(defined('KNPROXY_ENCRYPT_PAGE') && KNPROXY_ENCRYPT_PAGE=='true'){
 	if($knParser->type=='text/html' || $knParser->type==''){
 		$t = '<script language="javascript" type="text/javascript" src="js/denjihou.js"></script>';
 		$t.= '<script language="javascript" type="text/javascript">';
@@ -275,7 +275,7 @@ if(defined('KNPROXY_ENCRYPT_PAGE') && KNPROXY_ENCRYPT_PAGE=='true'){
 		}
 		exit();
 	}
-}
+}*/
 $knParser->parse();
 if(defined('KNPROXY_USE_GZIP') && KNPROXY_USE_GZIP == 'true' && substr_count($_SERVER['HTTP_ACCEPT_ENCODING'], 'gzip') && function_exists('ob_gzhandler')){
 	if(substr($knParser->type,0,5)=='text/'){
