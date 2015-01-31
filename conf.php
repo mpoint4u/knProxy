@@ -1,7 +1,7 @@
 <?php
 define('KNPROXY_SECRET','joWVexlW4fHeH/2GGNLefy8bV7JFaaTTF92AWp1k0jDsMqC8tqeAvdLo/gg');
 // Set the language for KnProxy (currently supports en-US and ja-JP)
-define('KNPROXY_LANGUAGE','zh-CN');
+define('KNPROXY_LANGUAGE','en-US');
 // Should the server use GZIP when outputting text data?
 define('KNPROXY_USE_GZIP','true');
 // Should the server accept remote gzipped files ?
@@ -28,7 +28,7 @@ define('KNPROXY_ETAG','forward');
 define('KNPROXY_CACHE_MODE','none');
 
 //Show a warning when using HTTPS for the first time?
-define('KNPROXY_HTTPS_WARNING','off');//on, off
+define('KNPROXY_HTTPS_WARNING','on');//on, off
 // Referer mode
 define('KNPROXY_REFERER','pseudo');//pseudo, disable, auto
 define('KNPROXY_ENCRYPT_PAGE','false');//是否加密页面，一般来说GFW不强烈时没必要启用
@@ -39,7 +39,7 @@ define('ENABLE_JS_PARSING','true');
 define('ENABLE_INJECTED_AJAXFIX','false');
 
 /** These values are for debugging **/
-define('KNPROXY_BINARY_CUTOFF',32*1024);//Cutoff of 32kb for binary data
+//define('KNPROXY_BINARY_CUTOFF',32*1024);//Cutoff of 32kb for binary data
 
 /** These values are for adjusting the PHP runtime **/
 @ini_set('pcre.backtrack_limit', 10000000);
